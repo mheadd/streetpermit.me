@@ -1,0 +1,25 @@
+{
+  "name": "streetpermit.me",
+  "version": "0.0.1",
+  "description": "Apply for a Street Occupancy Permit in Boston",
+  "main": "index.js",
+  "dependencies": {
+    "express": "latest",
+    "body-parser": "latest",
+    "request": "latest",
+    "xml2js": "latest",
+    "twilio": "latest",
+    "cradle": "latest",
+    "moment": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mheadd/streetpermit.me.git"
+  },
+  "author": "Mark Headd <mheadd@accela.com> (http://civic.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mheadd/streetpermit.me/issues"
+  },
+  "homepage": "https://github.com/mheadd/streetpermit.me"
+}

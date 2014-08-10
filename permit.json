@@ -1,0 +1,65 @@
+{
+ApplicationDetail: {
+DistrictCode: "01",
+StartDate: "#start-date#",
+Length: 0,
+Width: 0,
+SquareFootage: null,
+EstimatedDuration: 1,
+NumberOfParkingSpaces: #number-of-spaces#,
+PointOfContact: "#point-of-contact#",
+PointOfContactPhoneNumber: "#phone-number#",
+AllWorkPerformedCode: "07",
+AllWorkFromToTime: null,
+AllWorkPerformedExceptionCode: " ",
+FootLanesRequired: 0,
+LanesDirection: 0,
+IsNoVehicles: null,
+IsNoStockpiling: null,
+SuperintendentCode: " ",
+PoliceComments: null,
+WorkGridItems: [ ],
+MeterGridItems: [ ],
+SignGridItems: [ ],
+PoliceGridItems: [ ],
+SpecialRequirementGridItems: [ ],
+ApplicationDetailId: 0,
+AddedBy: null,
+AddedDateTime: null,
+LastModifiedDateTime: null,
+LastModifiedBy: null,
+Id: 0
+},
+Name: null,
+PermitNumber: null,
+ApplicationTypeKey: 1052,
+CreatedDate: null,
+LastModifiedDate: null,
+LocationKey: 598529,
+Applicants: [
+{
+ApplicantTypeKey: 4,
+Id: 0,
+Comments: null,
+IsPrimaryContact: "Y",
+Contact: {
+Id: 103344,
+Identity: {
+Id: 93540
+}
+},
+Capacity: {
+Code: " "
+}
+}
+],
+WorkTypeCode: "Movetrucks",
+OccupancyTypeCode: null,
+BuildingArea: 0,
+Comments: null,
+DeclaredValuation: 0,
+NumberOfPages: 0,
+NumberOfPlans: 0,
+Id: 0,
+LocationDescription: "#location-description#"
+}

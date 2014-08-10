@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Apply for a Street Occupancy Permit</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body {
+      padding: 15px;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+    input {
+      margin-top: 5px;
+    }
+    .error {
+      border-color: red;
+      border-width: 2px;
+    }
+    </style>
+
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">StreetPermit.me</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="http://www.cityofboston.gov/streetoccupancy/">More Info</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+      <div class="page-header">
+        <h1>Get Your Permit</h1>
+      </div>
+      
+      <form id="submit" class="form-horizontal" role="search" method="post" action="/register">
+        <div class="form-group"> 
+          <!--label for="PointofContact">Primary Point of Contact</label--> 
+          <input id="PointofContact" name="PointofContact" type="text" class="form-control" name="PointofContact" placeholder="What is your name?">
+          <!--label for="PhoneNumber">Phone Number</label-->
+          <input id="PhoneNumber" name="PhoneNumber" type="text" maxlength="10" class="form-control" placeholder="What is your phone number?">
+          <!--label for="StartDate">Start Date</label-->
+          <input id="StartDate" name="StartDate" readonly="true" type="text" class="form-control datepicker" placeholder="When do you need a permit?">
+          <!--label for="NumberOfSpaces">Number of Spaces</label-->
+          <input id="NumberOfSpaces" name="NumberOfSpaces" type="text" class="form-control" placeholder="For how many spaces?">
+          <!--label for="LocationDescription">Address</label-->
+          <input id="LocationDescription" name="LocationDescription" type="text" class="form-control" placeholder="At what location?">
+          <br/>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Le JavaScripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $('.datepicker').datepicker().on('changeDate', function() {
+          $(this).datepicker('hide');
+          $('#NumberOfSpaces').focus();
+        });
+
+        $(".form-control").blur(function() {
+          $(this).removeClass("error");
+        });
+
+        $("#submit").submit(function(){
+          $(".form-control").each(function(index) {
+            if($(this).val().length == 0) {
+              event.preventDefault();
+              $(this).addClass("error");
+            }
+          });
+        });
+
+      });
+    </script>
+  </body>
+</html>
