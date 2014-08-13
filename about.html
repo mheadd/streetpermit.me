@@ -51,9 +51,16 @@
         <h1>Get Your Permit</h1>
       </div>
       
-      <p>This is the about page.</p>
+      <p>An easy way to get street occupancy permits in the City of Boston. Built for the <a href="http://hubhacks.challengepost.com/"></a>HubHacks Hackathon</a>, August 2014.</p>
 
-
+      <p>Built with:</p>
+      <ul>
+        <li><a href="http://getbootstrap.com/">Bootstrap</a> front-end design framework.</li>
+        <li>JavaScript: <a href="http://jquery.com/">Jquery</a> and <a href="http://nodejs.org/">Node.js</a></li>
+        <li><a href="http://bootswatch.com/">Bootswatch</a> themes.</li>
+        <li><a href="http://couchdb.apache.org/">CouchDB</a> database</li>
+        <li><a href="https://www.twilio.com/">Twilio</a> SMS</li>
+      </ul>
     </div> <!-- /container -->
 
 
@@ -61,13 +68,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/datepicker/js/bootstrap-datepicker.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.datepicker').datepicker().on('changeDate', function() {
-          $(this).datepicker('hide');
-          $('#NumberOfSpaces').focus();
-        });
-      });
-    </script>
+
   </body>
 </html>
